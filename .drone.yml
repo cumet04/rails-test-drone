@@ -1,0 +1,12 @@
+pipeline:
+  build:
+    image: ruby:2.4.3
+    commands:
+      - bundle install --path=.bundle
+      - bundle exec rake db:migrate
+
+services:
+  db_host:
+    image: mariadb
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
