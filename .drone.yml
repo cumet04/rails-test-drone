@@ -5,6 +5,7 @@ pipeline:
       - bundle install --path=.bundle
       - bundle exec rake db:migrate
 
+
 services:
   db_host:
     image: mariadb
