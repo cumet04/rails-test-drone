@@ -12,3 +12,5 @@ services:
     image: mariadb
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    commands:
+      - echo 'create database dev_db;' | mysql -u root -h 127.0.0.1
